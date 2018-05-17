@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Root>
+  <Person IDCard="610424199902230099" Name="小田雨" MedicalID="体检编号" Sex="男" Age="22" MedicalRecordDate ="2011-01-01"  MedicalReportDate="2011-01-01"
+MedicalCount="体检次数"  HospitalID="001" HospitalName="兴隆园医院" >
+    <Results>
+      <Result>1</Result>
+      <Result>2</Result>
+      <Result>3</Result>
+    </Results>
+    <Conclusions>
+      <Conclusion>1</Conclusion>
+      <Conclusion>2</Conclusion>
+      <Conclusion>3</Conclusion>
+    </Conclusions>
+    <Suggestions>
+      <Suggestion>4</Suggestion>
+      <Suggestion>6</Suggestion>
+      <Suggestion>3</Suggestion>
+    </Suggestions>
+    <Health> 为空（预留）</Health>
+    <Class1>
+      <SubClass>
+      <para1>1</para1>
+      <para2>2</para2>
+      </SubClass>
+    </Class1>
+  </Person>
+
+  <MedicalItems>
+    <MedicalSub  ID ="0001" Name="化学检查"  >
+      <MedicalType ID ="0001001" Name="血常规" MedicalDoc="体检医师名字" MedicalDate="2011-02-13">
+
+        <Item ID="000100010001" Name="白细胞" Unit="G/L" Parameters="3.7--10.0" >
+          <Results>H==高，L=低，N=正常</Results>
+          <Value>11.1</Value>
+          <Disease></Disease>
+          <MedicalBodyPart> </MedicalBodyPart>
+          <MedicalImage> </MedicalImage>
+          <Conclusion ></Conclusion>
+        </Item>
+        <Item ID="000100010002" Name="红细胞" Unit="G/L" Parameters="3.7--10.0">
+          <Results>H==高，L=低，N=正常</Results>
+          <Value>11.1</Value>
+          <Disease></Disease>
+          <MedicalBodyPart> </MedicalBodyPart>
+          <MedicalImage> </MedicalImage>
+          <Conclusion ></Conclusion>
+        </Item>
+      </MedicalType>
+    </MedicalSub>
+    <MedicalSub  ID ="0002" Name="物理检查"  >
+      <MedicalType ID ="0002001" Name="B超" MedicalDoc="体检医师名字" MedicalDate="2011-02-13">
+        <Item ID="000200010001" Name="胸部B超" Unit=" " Parameters="">
+          <Results>A=异常，N=正常</Results>
+          <Value></Value>
+          <Disease>病种，未见异常</Disease>
+          <MedicalBodyPart>检查部位：胸部</MedicalBodyPart>
+          <MedicalImage>影像所见</MedicalImage>
+          <Conclusion >检查结论</Conclusion>
+        </Item>
+        <Item ID="000200010002" Name="腹部B超" Unit=" " Parameters="">
+          <Results>A=异常，N=正常</Results>
+          <Value></Value>
+          <Disease>病种，未见异常</Disease>
+          <MedicalBodyPart>检查部位：腹部</MedicalBodyPart>
+          <MedicalImage>影像所见</MedicalImage>
+          <Conclusion >检查结论</Conclusion>
+        </Item>
+      </MedicalType>
+
+    </MedicalSub>
+    <MedicalSub  ID ="0005" Name="五官科"  >
+      <MedicalType ID ="0005001" Name="眼科" MedicalDoc="体检医师名字" MedicalDate="2011-02-13">
+        <Item ID="000500010001" Name="视力/右" Unit=" " Parameters="1.0-1.5">
+          <Results>A=异常，N=正常</Results>
+          <Value>1.5</Value>
+          <Disease>病种，未见异常</Disease>
+          <MedicalBodyPart>检查部位</MedicalBodyPart>
+          <MedicalImage>影像所见</MedicalImage>
+          <Conclusion >检查结论</Conclusion>
+        </Item>
+        <Item ID="000500010002" Name="矫正视力/右" Unit=" " Parameters="1.0-1.5">
+          <Results>A=异常，N=正常</Results>
+          <Value>0.8</Value>
+          <Disease>病种，未见异常</Disease>
+          <MedicalBodyPart>检查部位</MedicalBodyPart>
+          <MedicalImage>影像所见</MedicalImage>
+          <Conclusion >检查结论</Conclusion>
+        </Item>
+      </MedicalType>
+
+    </MedicalSub>
+  </MedicalItems>
+</Root>

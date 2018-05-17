@@ -77,6 +77,9 @@ namespace CodeFirst
         public virtual Blog Blog { get; set; } 
         
     }
+    /// <summary>
+    /// MySQL数据库使用
+    /// </summary>
     [DbConfigurationType(typeof(MySqlEFConfiguration))]
     public class BloggingContext : DbContext
     {
