@@ -28,7 +28,7 @@ namespace T.MessageQueue.Test
             Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine("\r\n\r\n开始\r\n");
             Console.ForegroundColor = ConsoleColor.White;
-            string txt= File.ReadAllText("test.xml");
+            string txt = File.ReadAllText("test.xml");
 
             MessageQueueManager.InitMessageQueueServer("192.168.5.16", 5672, "trkj", "trkj");
 
