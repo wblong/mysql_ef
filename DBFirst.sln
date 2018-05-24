@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DBFirst", "DBFirst\DBFirst.csproj", "{86D9A5F3-5F00-4622-AE6C-B95A1602D9EF}"
 EndProject
@@ -14,6 +14,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T.MessageQueue.Rabbit", "T.MessageQueue.Rabbit\T.MessageQueue.Rabbit.csproj", "{9A5EAFD1-E1D0-4B26-ACB0-F53BC6D99401}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAPI", "WebAPI\WebAPI.csproj", "{5E71DD9B-3B3E-4EF1-BF2C-4AF743C3CEB0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAPI_EF", "WebAPI_EF\WebAPI_EF.csproj", "{004D99FD-33CA-4B2C-8426-2565EBDA0583}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{5E71DD9B-3B3E-4EF1-BF2C-4AF743C3CEB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5E71DD9B-3B3E-4EF1-BF2C-4AF743C3CEB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5E71DD9B-3B3E-4EF1-BF2C-4AF743C3CEB0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{004D99FD-33CA-4B2C-8426-2565EBDA0583}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{004D99FD-33CA-4B2C-8426-2565EBDA0583}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{004D99FD-33CA-4B2C-8426-2565EBDA0583}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{004D99FD-33CA-4B2C-8426-2565EBDA0583}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

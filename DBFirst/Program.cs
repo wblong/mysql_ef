@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using testMySQLEF;
 namespace DBFirst
 {
     class Program
@@ -15,11 +15,11 @@ namespace DBFirst
         }
         private static void GetCountryList()
         {
-            List<country> coutry_list = BLL<country>.GetModelList(e => e.Population > 10000);
+            List<users> coutry_list = BLL<users>.GetModelList(null);
             Console.WriteLine("Total:" + coutry_list.Count.ToString());
-            foreach(country c in coutry_list)
+            foreach(users c in coutry_list)
             {
-                Console.WriteLine("coutry:"+c.Name+"; ");
+                Console.WriteLine("coutry:"+c.firstname+"; ");
             }
             Console.WriteLine();
         }
