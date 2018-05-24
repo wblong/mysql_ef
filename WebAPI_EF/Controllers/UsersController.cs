@@ -36,6 +36,7 @@ namespace WebAPI_EF.Controllers
         // PUT: api/Users/5
         public void Put(int id, [FromBody]users user)
         {
+             
             var temp = BLL<users>.GetModelList(e => e.id == id).FirstOrDefault();
             if (temp != null)
             {
@@ -44,6 +45,8 @@ namespace WebAPI_EF.Controllers
                 temp.lastname = user.lastname;
                 temp.phone = user.phone;
                 temp.email = user.email;
+                BLL<users>.Delete(e => e.id == id);
+                BLL<users>.Add(user);
             }
             else
             {

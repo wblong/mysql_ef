@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <meta charset="utf-8">
+    <title>Index</title>
+     <script type="text/javascript" src="../../jquery.min.js"></script>
+</head>
+<body>
+    <fieldset>
+        <a href="javascript:add()">添加(Add)</a>
+        <a href="javascript:Put(4)">更新(Put)</a>
+        <a href="javascript:Delete(4)">删除(Delete)</a>
+        <a href="javascript:getAll()">获取所有</a>
+    </fieldset>
+    <script type="text/javascript">
+        function getAll() {
+            $.ajax({
+                url: "http://localhost:14906/api/Users",
+                type: "Get",
+                success: function (data) {
+                    alert(JSON.stringify(data));
+                }
+            });
+        }
+        function add() {
+            $.ajax({
+                url: "http://localhost:14906/api/Users",
+                type: "Post",
+                data: {"id":100,"firstname":"1","lastname":"1","phone":"1","email":"1"},
+                success:function(data) {
+                    alert(JSON.stringify(data));
+                }
+            });
+        }
+ 
+        function Put(id) {
+            $.ajax({
+                url: "http://localhost:14906/api/Users/"+id,
+                type: "put",
+                data: {"id":1,"firstname":"222","lastname":"1","phone":"1","email":"1"},
+            });
+        }
+
+        function Delete(id) {
+            $.ajax({
+                url: "http://localhost:14906/api/Users/"+id,
+                type: "Delete"
+            });
+        }
+    </script>
+</body>
+</html>
