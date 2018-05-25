@@ -95,7 +95,7 @@ namespace T.MessageQueue.Rabbit
         private IBasicProperties Props;
 
         /// <summary>
-        /// 通道
+        /// 通道-频道
         /// </summary>
         private IModel channel;
         /// <summary>
@@ -128,6 +128,7 @@ namespace T.MessageQueue.Rabbit
                 IConnectionResource res = IConnectionResourceList.FirstOrDefault(x => x.ServerIp.Equals(serverIp) && x.ServerPort == serverPort);
                 if (res == null)
                 {
+                    //创建一个连接工厂
                     ConnectionFactory factory = new ConnectionFactory
                     {
                         Port = serverPort,
@@ -150,7 +151,7 @@ namespace T.MessageQueue.Rabbit
                                 hosts.Add(host);
                         });
                         connection = factory.CreateConnection(hosts);
-                    }
+                    }//一个主机，单一主机
                     else
                     {
                         factory.HostName = serverIp;
@@ -182,22 +183,22 @@ namespace T.MessageQueue.Rabbit
 
 
         #region IConnection事件
-
+        //锁定
         private static void connection_ConnectionUnblocked(object sender, EventArgs e)
         {
             //TextLog.SaveError(e.ToString());
         }
-
+        //阻止
         private static void connection_ConnectionBlocked(object sender, ConnectionBlockedEventArgs e)
         {
             //TextLog.SaveError(e.Reason);
         }
-
+        //回调异常
         private static void connection_CallbackException(object sender, CallbackExceptionEventArgs e)
         {
             //TextLog.SaveError(e.Exception.Message);
         }
-
+        //连接关闭
         private static void connection_ConnectionShutdown(object sender, ShutdownEventArgs e)
         {
             //TextLog.SaveError(e.ReplyText);
@@ -342,7 +343,7 @@ namespace T.MessageQueue.Rabbit
         }
 
         /// <summary>
-        /// 消息应答
+        /// 消息应答 acknowledge
         /// </summary>
         /// <param name="deliveryTag"></param>
         /// <param name="multiple"></param>
@@ -390,6 +391,8 @@ namespace T.MessageQueue.Rabbit
             this.ExchangeAutoDelete = exchangeAutoDelete;
 
             bool success = true;
+            //try catch
+            //
             try
             {
                 connection = GetConnectionByServerInfo(this.ServerIp, this.ServerPort, this.UserName, this.Password);
@@ -457,7 +460,7 @@ namespace T.MessageQueue.Rabbit
         #endregion
 
         /// <summary>
-        /// 释放资源
+        /// 释放资源(释放资源)
         /// </summary>
         public void Dispose()
         {

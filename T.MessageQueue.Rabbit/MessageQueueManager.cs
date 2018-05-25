@@ -45,7 +45,7 @@ namespace T.MessageQueue.Rabbit
         /// <param name="queueExclusive">Queue排他性,离线自动删除</param>
         /// <param name="prefetchCount">订阅者预取消息数量</param>
         /// <param name="noAck">无需Ack回复</param>
-        /// <returns></returns>
+        /// <returns>消息订阅者</returns>
         public static IQueueSubscriber GerarateIQueueSubscriber(string exchangeName, string queueName, string typeName = "topic", string routeKey = "", bool exchangeDurable = true, bool exchangeAutoDelete = false, bool queueDurable = true, bool queueAutoDelete = false, bool queueExclusive = false, ushort prefetchCount = 0, bool noAck = false, int maxLength = -1, int maxBytes = -1, int messageTtl = -1)
         {
             IQueueSubscriber client = new MessageQueueClient();
@@ -65,7 +65,7 @@ namespace T.MessageQueue.Rabbit
         /// <param name="queueDurable">Queue持久化</param>
         /// <param name="queueAutoDelete">Queue断线自动删除</param>
         /// <param name="queueExclusive">Queue排他性</param>
-        /// <returns></returns>
+        /// <returns>消息发布者</returns>
         public static IQueuePublisher GerarateIQueuePublisher(string exchangeName, string typeName = "topic", string routeKey = "", bool exchangeDurable = true, bool exchangeAutoDelete = false)
         {
             IQueuePublisher client = new MessageQueueClient();
